@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SafeResourceUrl} from '@angular/platform-browser';
-import {DomSanitizer} from "@angular/platform-browser";
+import {DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +12,11 @@ export class AppComponent {
 
 url: SafeResourceUrl;
   constructor(sanitizer: DomSanitizer) {
-    this.url = sanitizer.bypassSecurityTrustResourceUrl("https://test.de");
+    this.url = sanitizer.bypassSecurityTrustResourceUrl('https://test.de');
   }
 
   setHystrixToService() {
-    console.log("TEST");
-    return "https://test.de";
+    console.log('TEST');
+    return 'https://test.de';
   }
 }

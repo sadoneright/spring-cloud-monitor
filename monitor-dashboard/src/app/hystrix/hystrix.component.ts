@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {DomSanitizer} from "@angular/platform-browser";
+import {DomSanitizer} from '@angular/platform-browser';
 import { SafeResourceUrl} from '@angular/platform-browser';
 import { HystrixEndpointsServiceService } from '../hystrix-endpoints-service.service';
 
@@ -16,7 +16,7 @@ export class HystrixComponent implements OnInit {
   services = [];
 
   constructor(private sanitizer: DomSanitizer, private hystrixEndpoints: HystrixEndpointsServiceService) {
-    this.url = sanitizer.bypassSecurityTrustResourceUrl("http://localhost:8095/hystrix");
+    this.url = sanitizer.bypassSecurityTrustResourceUrl('http://localhost:8095/hystrix');
   }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class HystrixComponent implements OnInit {
   }
 
   hystrix(url) {
-    this.url = this.sanitizer.bypassSecurityTrustResourceUrl("http://localhost:8095/hystrix/monitor?stream=" + url);
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl('http://localhost:8095/hystrix/monitor?stream=' + url);
   }
 
 

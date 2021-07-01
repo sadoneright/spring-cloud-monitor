@@ -44,7 +44,7 @@ export class MonitorComponent implements OnInit {
 
   public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData: number[] = [350, 450, 100];
-  public doughnutChartType: string = 'doughnut';
+  public doughnutChartType = 'doughnut';
 
   public snapshot: any = { application: 'moep', usedMemory: 100, freeMemory: 200 };
 
